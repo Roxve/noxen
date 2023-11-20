@@ -13,24 +13,31 @@ NOTE: this is supposed to be border colored red and text colored yellow
 
 there is only one proc to make boxes
 
+
+# **makes a box!**
+
 ```nim
 proc makeBox*(text: string, title: string = "", full_style: (s: string) -> string = none, border_style: (s: string) -> string = none, text_style: (s: string) -> string = none): string
 ```
-# **makes a box!**
 ## args =>
-========
+===========
 
 
-**text: text to put in body**
-**title: title of the box**
-**full_style: a proc string => string adds customization to the whole box like colors**
-**border_style: a proc string => string adds customization to the border like colors or changing border chars**
-**text_style: a proc string => string adds cutomization to the text can be a color**
+- **text: text to put in body**
+
+- **title: title of the box**
+
+- **full_style: a proc string => string adds customization to the whole box like colors**
+
+- **border_style: a proc string => string adds customization to the border like colors or changing border chars**
+
+- **text_style: a proc string => string adds cutomization to the text can be a color**
+
 ### noxen also comes with builtin procs to add colors ex. red, green, none(default),yellow, grey
 
 
 ## Examples
-========   
+============
 
   
 ```nim
