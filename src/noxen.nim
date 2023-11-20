@@ -54,8 +54,8 @@ proc makeBox*(text: string, title: string = "", full_style: (s: string) -> strin
     res &= " │\n".border_style 
     result &= res.border_style
 
-  result &= "╰─".border_style
-  for i in 5 .. maxWidth: 
+  result &= "╰".border_style
+  for i in 3 .. maxWidth: 
     result &= "─".border_style
-  result &= "─╯".border_style
+  result &= "╯".border_style
   result = result.full_style

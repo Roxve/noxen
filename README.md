@@ -9,6 +9,7 @@ example output
 ╰──────────────────────────────────────────────────────╯
 ```
 NOTE: output may look broken on github page
+
 NOTE: this is supposed to be border colored red and text colored yellow
 
 there is only one proc to make boxes
@@ -47,3 +48,33 @@ makeBox("this is a error at 5:5", "error", full_style = red)
 ```nim
 makeBox("this is a error at 5:5", "error", border_style = red, text_style = yellow)
 ```
+
+
+
+style procs can be used for customizing border chars
+ex.
+```nim
+proc myStyle(s: string): string =
+  
+  result = s.replace("╭", "@")
+  result = result.replace("╮", "@")
+  result = result.replace("╯", "@")
+  result = result.replace("╰","@")
+
+echo "my awesome style window".makeBox("my window", border_style=myStyle
+```
+
+
+NOTE: replace is avalibe in strutils
+
+result =
+```nim
+@──────my window──────────@
+│ my awesome style window │
+@─────────────────────────@
+```
+
+
+### Credits
+inspired by [boxen](https://github.com/sindresorhus/boxen)
+made by accident by me (void*) for my own programming language (covalent) error messages
